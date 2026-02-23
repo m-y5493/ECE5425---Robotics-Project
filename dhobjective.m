@@ -15,7 +15,7 @@ marge = SerialLink([L(1) L(2) L(3)], 'name', 'marge');
 err = 0;
 
 for i = 1:size(data,1)
-    qn = data(i,:)
+    qn = data(i,:);
     T = marge.fkine(qn);
     newpos = T(1:3,4);
     pos = target_positions(i,:)';
